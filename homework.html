@@ -1,0 +1,218 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>张三的个人简介</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑", Arial, sans-serif;
+    background-color: #eaf4fb;
+    color: #333333;
+  }
+
+  /* 顶部导航 */
+  .navbar {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #cfe6f2;
+  }
+
+  .navbar h2 { color: #2c6693; margin: 0; }
+  .navbar a { color: #2c6693; text-decoration: none; margin-left: 20px; font-size: 15px; }
+  .navbar a:hover { text-decoration: underline; }
+
+  /* 首页大标题区域 */
+  .banner {
+    background-color: #cde7f5;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .banner h1 { color: #1f4e6b; font-size: 36px; margin-bottom: 10px; }
+  .banner p { color: #3a6f8f; font-size: 18px; }
+
+  /* 每个板块通用样式 */
+  .section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .section h2 {
+    color: #1f4e6b;
+    border-left: 5px solid #6cb4dd;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+  .section p { line-height: 1.8; font-size: 15px; }
+
+  /* 技能部分 */
+  .skill-item {
+    background-color: #ffffff;
+    border: 1px solid #cfe6f2;
+    border-radius: 6px;
+    padding: 12px 18px;
+    margin-bottom: 12px;
+  }
+  .skill-item span { font-weight: bold; color: #2c6693; }
+
+  /* 项目部分 */
+  .project-box {
+    background-color: #ffffff;
+    border: 1px solid #cfe6f2;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+  }
+  .project-box h3 { color: #2c6693; margin-top: 0; margin-bottom: 8px; }
+
+  /* 联系方式部分 */
+  .contact {
+    background-color: #d9edf9;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .contact h2 { color: #1f4e6b; }
+  .contact p { font-size: 15px; color: #3a6f8f; margin: 6px 0; }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #7ba3bc;
+    font-size: 13px;
+    border-top: 1px solid #cfe6f2;
+  }
+
+  /* 留言板部分 */
+  .message-box {
+    background-color: #ffffff;
+    border: 1px solid #cfe6f2;
+    border-radius: 6px;
+    padding: 20px;
+  }
+  .message-box textarea {
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #cfe6f2;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    box-sizing: border-box;
+  }
+  .message-box button {
+    margin-top: 10px;
+    background-color: #6cb4dd;
+    color: #ffffff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .message-box button:hover { background-color: #4a95c4; }
+
+  .message-list { margin-top: 20px; }
+  .message-item {
+    background-color: #eaf4fb;
+    border-radius: 4px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333333;
+  }
+
+
+</style>
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <div class="navbar">
+    <h2>张三的主页</h2>
+    <div>
+      <a href="#about">关于我</a>
+      <a href="#skills">技术栈</a>
+      <a href="#projects">项目经历</a>
+      <a href="#message">留言板</a>
+      <a href="#contact">联系方式</a>
+    </div>
+  </div>
+
+  <!-- 首页横幅 -->
+  <div class="banner">
+    <h1>你好，我是张三</h1>
+    <p>计算机科学与技术专业 | 正在学习 Java 后端开发</p>
+  </div>
+
+  <!-- 关于我 -->
+  <div class="section" id="about">
+    <h2>关于我</h2>
+    <p>
+      我是南京审计大学计算机科学与技术专业的学生，学号后两位是 2-33。
+      平时主要学习 Java、数据库和一些简单的网页开发。
+      目前还在学习阶段，希望通过多做项目来提升自己的实际动手能力。
+    </p>
+  </div>
+
+  <!-- 技术栈 -->
+  <div class="section" id="skills">
+    <h2>技术栈</h2>
+    <div class="skill-item"><span>Java</span> —— 学习中，能完成基础的面向对象编程</div>
+    <div class="skill-item"><span>MySQL / Oracle</span> —— 掌握基本的增删改查和数据导入导出</div>
+    <div class="skill-item"><span>HTML / CSS</span> —— 会写简单的网页布局和样式</div>
+    <div class="skill-item"><span>Python</span> —— 了解基础语法，能写一些小脚本</div>
+  </div>
+
+  <!-- 项目经历 -->
+  <div class="section" id="projects">
+    <h2>项目经历</h2>
+
+    <div class="project-box">
+      <h3>校园二手交易管理系统</h3>
+      <p>数据库课程实训项目，主要负责数据库表结构设计，实现了商品发布、交易记录等基本功能。</p>
+    </div>
+
+    <div class="project-box">
+      <h3>个人网站页面</h3>
+      <p>网页设计课程作业，学习了如何用 HTML 和 CSS 搭建一个简单的个人介绍页面。</p>
+    </div>
+  </div>
+
+  <!-- 留言板 -->
+  <div class="section" id="message">
+    <h2>留言板</h2>
+    <div class="message-box">
+      <textarea id="messageInput" placeholder="在这里写下你想说的话..."></textarea>
+      <br>
+      <button onclick="addMessage()">提交留言</button>
+
+      <div class="message-list" id="messageList">
+        <!-- 提交的留言会显示在这里 -->
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- 联系方式 -->
+  <div class="contact" id="contact">
+    <h2>联系方式</h2>
+    <p>邮箱：example@nau.edu.cn</p>
+    <p>学校：南京审计大学</p>
+  </div>
+
+  <footer>
+    © 2026 张三 · 本页面为课程作业内容
+  </footer>
+
+</body>
+</html>
+```
